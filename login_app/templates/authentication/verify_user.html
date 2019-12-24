@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+<script type="text/javascript">
+function myFun(){
+    var x = document.getElementById("otp_id").innerHTML;
+    console.log(x);
+    alert(x);
+}
+
+
+
+{% block content %}
+
+        <form id="form_id" method='POST' action="{% url 'dashboardView' %}">
+
+            {% csrf_token %}
+
+            Enter your otp : <input id="otp_id" type='text' name='otp'> <br><br>
+
+            <button id="submit_id_btn" onclick="myFun()">Submit</button>
+        </form>
+
+{% endblock content %}
+
+</script> 

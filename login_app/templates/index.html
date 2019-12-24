@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Welcome to EMS</title>
+</head>
+
+<body>
+
+    <center> <h1>Welcome to Employee Management System</h1></center>
+
+    <center>
+        {% block content %}
+     
+        <a href='{% url 'loginView' %}'>Login</a>
+        <a href='{% url 'registerView' %}'>Register</a>
+
+        {% endblock content %}
+
+    </center>
+
+</body>
+
+</html>

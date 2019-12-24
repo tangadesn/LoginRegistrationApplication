@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+
+
+    {% block content %}
+
+    <center>
+        <h3> User Registeration<h3>
+
+        <form method='POST' action="{% url 'userregistration' %}">
+
+            {% csrf_token %}
+
+            Email_id : <input type='email' name='email'> <br><br>
+            Password : <input type='pass' name='password'> <br><br>
+            Name : <input type='text' name='name'> <br><br>
+            Mobile : <input type='text' name='mobile'> <br><br>
+            
+            <button>Submit</submit>
+
+        </form>
+    </center>
+
+        
+    
+{% endblock content %}

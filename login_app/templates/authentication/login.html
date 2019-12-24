@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+
+
+    {% block content %}
+
+    <center>
+
+        <h3>User Login<h3>
+
+        <form method='POST' action="{% url 'verifyView' %}">
+
+            {% csrf_token %}
+            <table>
+                <tr>
+                    username : <input type='text' name='username'> <br><br>
+                </tr>
+                
+                <tr><td>
+                select user verification</td>
+                    <td>
+                        <input type="radio" name="otp_device" value="mobile_device">Mobile
+                    </td>
+                    <td>
+                        <input type="radio" name="otp_device" value="email_device">Email
+                    </td>
+                </tr>
+                <tr>
+                password : <input type='password' name='password'> <br><br>
+                </tr>
+
+                <tr>
+                <td>
+                <button>Submit</submit>
+                </td>
+                    
+                </tr>
+            </table>
+        </form>
+    </center>
+
+{% endblock content %}
